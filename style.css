@@ -1,0 +1,154 @@
+:root {
+    /***************  root settings  **************/
+    /* background */
+    --bg-header: #dcd7d7; /* background navbar*/
+    --bg-body: #ffffff; /* background body */
+    --bg-card: #ffffff; /* background card */
+    --bg-main: #8989896b; /* background main color for section */
+    --bg-sub: #898989c7; /* transparent secondary background*/
+    --bg-btn-primary: transparent; /* background btn primary*/
+    --bg-btn-dark: #3d3d3db2; /* background btn dark*/
+    --bg-btn-secondary: transparent; /* background btn secondary*/
+    /* colors */
+    --color-white: #ffffff; /* color white for text*/
+    --color-black: #222; /* color black for text*/
+    --color-dark: #3e3e3e; /* color dark for text*/
+    --color-primary: transparent; /* color primary */
+    --color-secondary: transparent; /* color secondary */
+    /* box shadow  */
+    --box-shadow-dep: 5px 5px 15px #898989,-5px -5px 15px var(--color-white) ; /* box shadow for deportment*/
+    --box-shadow-btn: 0px 0px 8px var(--color-dark) ; /* box shadow for button*/
+    /* size card  */
+    --width-card: 220px; /* width card deportment  */
+    --hight-card: 220px; /* hight card deportment  */
+    --width-dr-content:180px;  /* width dropdown content*/
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    user-select: none !important;
+}
+body{
+    background-color: var(--bg-body);
+}
+.navbar{
+    width: 100%;
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-header);
+    color: var(--color-black);
+    font-size: 24px;
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 3px solid var(--color-dark);
+}
+.navbar a img{
+    width: auto;
+    height: 85px;
+    
+}
+.mainContent{
+    text-align: center;
+}
+.mainContent h2{
+    color: var(--color-black);
+    font-size: 28px;
+    margin: 30px auto;
+}
+.mainContent .container{
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    margin: 30px auto;
+}
+.mainContent .container .health-sciences,
+.mainContent .container .industry-energy{
+    width: 300px;
+    height: 300px;
+    background-color: var(--bg-card);
+}
+.mainContent .container .health-sciences img,
+.mainContent .container .industry-energy img{
+    width: 100%;
+    height: 100%;
+}
+.department{
+    width: var(--width-card);
+    height: var(--hight-card);
+    background-color: var(--bg-card);
+    
+}
+.card{
+    margin: auto;
+    border-radius: 32px;
+    padding: 20px;
+    box-shadow:  var(--box-shadow-dep);
+    
+}
+.card img{
+    width: 80% !important;
+    height: 80%;
+    
+}
+.container{
+    max-width: 100%;
+    background-color: var(--bg-main);
+    padding: 30px 20px;
+    margin: 0;
+}
+.departments {
+    text-align: center;
+    margin-bottom: 70px;
+}
+.dropdown-button {
+    background-color: var(--bg-btn-dark);
+    color: var(--color-white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 7px ;
+    width: 100%;
+    font-size: 18px;
+    user-select: none;
+    text-decoration: none;
+    outline: none;
+    box-shadow: var(--box-shadow-btn);
+    text-transform: capitalize;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--bg-sub);
+    font-weight: bold;
+    font-size: 18px;
+    min-width: 160px;
+    border-radius: 7px;
+    width: var(--width-dr-content);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: var(--color-white);
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: var(--bg-main);
+    border-radius: 7px;
+}
+@media screen and (max-width: 600px) {
+    .navbar{
+        padding: 60px 10px;
+        justify-content: space-around;
+    }
+    .navbar p{
+        display: none;
+    }
+}
